@@ -59,7 +59,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF1C4C59),
+        backgroundColor: Color(0xFF3469B3),
         title: Text("Choose your location"),
         elevation: 0,
 
@@ -72,49 +72,52 @@ class _ChooseLocationState extends State<ChooseLocation> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/location-background.png'),
+            image: AssetImage('assets/location-background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
-        child: ListView.builder(
-            itemCount: locations.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  elevation: 0.0,
-                  color: Color(0xC11D1D),
-                  child: Container(
-                    decoration:  BoxDecoration(
-                      color: Color(0x23FFFFFF),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 16),
+          child: ListView.builder(
+              itemCount: locations.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
-                      shape: BoxShape.rectangle,
-                      border: Border.all(
-                        color: Color(0xB3FFFFFF),
-                        width: 1,
-                      ),
                     ),
-                    child: ListTile(
-                      tileColor: Color(0xC11D1D),
+                    elevation: 0.0,
+                    color: Color(0xC11D1D),
+                    child: Container(
+                      decoration:  BoxDecoration(
+                        color: Color(0x23FFFFFF),
+                        borderRadius: BorderRadius.circular(16),
+                        shape: BoxShape.rectangle,
+                        border: Border.all(
+                          color: Color(0xB3FFFFFF),
+                          width: 1,
+                        ),
+                      ),
+                      child: ListTile(
+                        tileColor: Color(0xC11D1D),
 
-                      onTap: () {
-                        updateTime(index);
-                      },
-                      title: Text(locations[index].name,
+                        onTap: () {
+                          updateTime(index);
+                        },
+                        title: Text(locations[index].name,
 
-                        style: TextStyle(
-                          fontFamily: 'Overpass',
-                          color: Color(0xFFFFFFFF),
+                          style: TextStyle(
+                            fontFamily: 'Overpass',
+                            color: Color(0xFFFFFFFF),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              );
-            }),
+                );
+              }),
+        ),
       ),
     );
   }
