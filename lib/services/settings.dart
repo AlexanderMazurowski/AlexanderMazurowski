@@ -1,0 +1,1 @@
+String lan = "de";
