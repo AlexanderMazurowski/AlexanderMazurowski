@@ -6,7 +6,6 @@ import 'package:wetter_app/services/settings.dart';
 import 'package:wetter_app/services/world_summary.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-//import 'package:test1/assets';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -21,7 +20,7 @@ class _HomeState extends State<Home> {
   Future<void> setupWorldSummary() async {
     if (data.isEmpty) {
       WorldSummary instance =
-      WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan);
+      WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan, name: "Wien");
       //WorldWeather wInstance =
       //WorldWeather(location: "location", flag: "flag", url: "url");
       await instance.getWorldSummary();

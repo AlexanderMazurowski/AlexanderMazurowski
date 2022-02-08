@@ -7,6 +7,7 @@ class WorldSummary {
   String location;
   String url;
   String lan;
+  String name;
 
   late String locationName;
   late String temp;
@@ -23,7 +24,7 @@ class WorldSummary {
   late Color dynamicBorderColor;
   late bool negativeTemp;
 
-  WorldSummary({required this.location, required this.url, required this.lan});
+  WorldSummary({required this.location, required this.url, required this.lan, required this.name});
 
   Future<void> getWorldSummary() async {
     WorldTime timeInstance = WorldTime(url: url);

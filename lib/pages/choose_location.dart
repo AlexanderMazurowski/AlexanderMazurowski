@@ -12,16 +12,15 @@ class ChooseLocation extends StatefulWidget {
 
 class _ChooseLocationState extends State<ChooseLocation> {
   List<WorldSummary> locations = [
-    WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan),
-    WorldSummary(location: "st%20johns", url: "America/St_Johns", lan: lan),
-    WorldSummary(location: "london", url: "Europe/London", lan: lan),
-    WorldSummary(location: "vladivostok", url: "Asia/Vladivostok", lan: lan),
-    WorldSummary(location: "yakutsk", url: "Asia/Yakutsk", lan: lan),
-    WorldSummary(location: "madeira", url: "Atlantic/Madeira", lan: lan),
-    WorldSummary(location: "magadan", url: "Asia/Magadan", lan: lan),
-    WorldSummary(location: "new%20york", url: "America/New_York", lan: lan),
-    WorldSummary(location: "miami", url: "Etc/GMT+5", lan: lan),
-    WorldSummary(location: "norrkoeping", url: "Europe/Stockholm", lan: lan),
+    WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan, name: "Wien"),
+    WorldSummary(location: "london", url: "Europe/London", lan: lan, name: "London"),
+    WorldSummary(location: "vladivostok", url: "Asia/Vladivostok", lan: lan, name: "Wladivostok"),
+    WorldSummary(location: "yakutsk", url: "Asia/Yakutsk", lan: lan, name: "Jakutsk"),
+    WorldSummary(location: "madeira", url: "Atlantic/Madeira", lan: lan, name: "Madeira"),
+    WorldSummary(location: "magadan", url: "Asia/Magadan", lan: lan, name: "Magadan"),
+    WorldSummary(location: "new%20york", url: "America/New_York", lan: lan, name: "New York City"),
+    WorldSummary(location: "miami", url: "Etc/GMT+5", lan: lan, name: "Miami"),
+    
   ];
 
   void updateTime(index) async {
@@ -107,7 +106,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
                       onTap: () {
                         updateTime(index);
                       },
-                      title: Text(locations[index].url,
+                      title: Text(locations[index].name,
 
                         style: TextStyle(
                           fontFamily: 'Overpass',
