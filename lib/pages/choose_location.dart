@@ -14,13 +14,14 @@ class _ChooseLocationState extends State<ChooseLocation> {
   List<WorldSummary> locations = [
     WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan, name: "Wien"),
     WorldSummary(location: "london", url: "Europe/London", lan: lan, name: "London"),
-    WorldSummary(location: "vladivostok", url: "Asia/Vladivostok", lan: lan, name: "Wladivostok"),
+    WorldSummary(location: "vladivostok", url: "Asia/Vladivostok", lan: lan, name: "Wladiwostok"),
     WorldSummary(location: "yakutsk", url: "Asia/Yakutsk", lan: lan, name: "Yakutsk"),
     WorldSummary(location: "madeira", url: "Atlantic/Madeira", lan: lan, name: "Madeira"),
     WorldSummary(location: "magadan", url: "Asia/Magadan", lan: lan, name: "Magadan"),
     WorldSummary(location: "new%20york", url: "America/New_York", lan: lan, name: "New York City"),
     WorldSummary(location: "miami", url: "Etc/GMT+5", lan: lan, name: "Miami"),
-
+    WorldSummary(location: "bratislava", url: "Europe/Vienna", lan: lan, name: "Bratislava"),
+    WorldSummary(location: "kottingbrunn", url: "Europe/Vienna", lan: lan, name: "Kottingbrunn"),
   ];
 
   void updateTime(index) async {
