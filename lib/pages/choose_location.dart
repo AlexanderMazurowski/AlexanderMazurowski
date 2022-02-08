@@ -101,7 +101,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
                         ),
                       ),
                       child: ListTile(
-                        tileColor: Color(0xC11D1D),
+                        tileColor: Color(0x00C11D1D),
 
                         onTap: () {
                           updateTime(index);
