@@ -20,7 +20,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldSummary(location: "magadan", url: "Asia/Magadan", lan: lan, name: "Magadan"),
     WorldSummary(location: "new%20york", url: "America/New_York", lan: lan, name: "New York City"),
     WorldSummary(location: "miami", url: "Etc/GMT+5", lan: lan, name: "Miami"),
-    
+
   ];
 
   void updateTime(index) async {
@@ -59,7 +59,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF47BFDF),
+        backgroundColor: Color(0xFF1C4C59),
         title: Text("Choose your location"),
         elevation: 0,
 
@@ -71,13 +71,10 @@ class _ChooseLocationState extends State<ChooseLocation> {
       //),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFF47BFDF), Color(0xFF3474E0)],
-            stops: [0, 1],
-            begin: AlignmentDirectional(0, -1),
-            end: AlignmentDirectional(0, 1),
+          image: DecorationImage(
+            image: AssetImage('assets/location-background.png'),
+            fit: BoxFit.cover,
           ),
-          shape: BoxShape.rectangle,
         ),
         child: ListView.builder(
             itemCount: locations.length,
