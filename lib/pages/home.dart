@@ -85,8 +85,8 @@ class _HomeState extends State<Home> {
                           IconButton(
                             icon: Icon(
                               Icons.menu,
-                              color: data["dynamicColor"],
-                              size: 24,
+                              color: Color.fromRGBO(0, 0, 0, 0.0),
+                              size: 32,
                             ),
                             onPressed: () {},
                           ),
@@ -103,7 +103,7 @@ class _HomeState extends State<Home> {
                             icon: Icon(
                               Icons.search,
                               color: data["dynamicColor"],
-                              size: 24,
+                              size: 32,
                             ),
                             onPressed: () async {
                               result = await Navigator.pushNamed(

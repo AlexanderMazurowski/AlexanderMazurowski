@@ -15,7 +15,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan, name: "Wien"),
     WorldSummary(location: "london", url: "Europe/London", lan: lan, name: "London"),
     WorldSummary(location: "vladivostok", url: "Asia/Vladivostok", lan: lan, name: "Wladivostok"),
-    WorldSummary(location: "yakutsk", url: "Asia/Yakutsk", lan: lan, name: "Jakutsk"),
+    WorldSummary(location: "yakutsk", url: "Asia/Yakutsk", lan: lan, name: "Yakutsk"),
     WorldSummary(location: "madeira", url: "Atlantic/Madeira", lan: lan, name: "Madeira"),
     WorldSummary(location: "magadan", url: "Asia/Magadan", lan: lan, name: "Magadan"),
     WorldSummary(location: "new%20york", url: "America/New_York", lan: lan, name: "New York City"),
