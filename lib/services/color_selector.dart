@@ -43,5 +43,3 @@ Color getBorderColor(id){
     return const Color(0xB3000000);
   }
 }
-
-//id == "01n"|| id == "02n"|| id == "03n"|| id == "04n" || id == "09n" || id == "10n" || id == "11n" || id == "13n" || id == "50n"

@@ -31,13 +31,10 @@ class WorldSummary {
     WorldWeather weatherInstance = WorldWeather(location: location, lan: lan);
 
     await timeInstance.getTime();
-
     await weatherInstance.getWeather();
 
     locationName = weatherInstance.locationName;
     temp = weatherInstance.temp;
-
-
     time = timeInstance.time;
 
     main = weatherInstance.main;
@@ -52,17 +49,5 @@ class WorldSummary {
     dynamicGradient = getGradient(icon);
     dynamicColor = getColor(icon);
     dynamicBorderColor = getBorderColor(icon);
-
-
-
-
-
-
-
-
-
-
-
   }
-
 }

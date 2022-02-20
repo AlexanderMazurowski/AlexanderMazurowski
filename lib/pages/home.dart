@@ -21,17 +21,10 @@ class _HomeState extends State<Home> {
     if (data.isEmpty) {
       WorldSummary instance =
       WorldSummary(location: "vienna", url: "Europe/Vienna", lan: lan, name: "Wien");
-      //WorldWeather wInstance =
-      //WorldWeather(location: "location", flag: "flag", url: "url");
+
       await instance.getWorldSummary();
 
-      //await wInstance.getWeather();
-      //print(wInstance.fTemp);
-
-      //timer = Timer.periodic(const Duration(seconds: 1), (Timer t) =>  instance.getTime());
-      print("test1" + instance.time);
-
-      //time = instance.time;
+      print(instance.time);
 
       data = {
         "location": instance.locationName,
@@ -49,7 +42,6 @@ class _HomeState extends State<Home> {
         "dynamicColor": instance.dynamicColor,
         "dynamicBorderColor": instance.dynamicBorderColor,
         "negativeTemp": instance.negativeTemp,
-        //"temp": instance.temp,
       };
       //running = false;
       print(data);
@@ -58,6 +50,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+
     dynamic result;
     return Scaffold(
       body: FutureBuilder(
@@ -107,7 +100,7 @@ class _HomeState extends State<Home> {
                             ),
                             onPressed: () async {
                               result = await Navigator.pushNamed(
-                                context, "/location",/*arguments: {data["dynamicGradient"]}*/);
+                                context, "/location");
                               print(result);
                               setState(() {
                                 data = result;
@@ -216,14 +209,6 @@ class _HomeState extends State<Home> {
                                         ),
                                       ),
                                     ),
-                                    /*Text(
-                                      '|',
-                                      style: TextStyle(
-                                        fontFamily: 'Overpass',
-                                        color: data["dynamicColor"],
-                                        fontSize: 16,
-                                      ),
-                                    ),*/
                                     Text(
                                       data["wind"],
                                       style: TextStyle(
@@ -232,13 +217,6 @@ class _HomeState extends State<Home> {
                                         fontSize: 16,
                                       ),
                                     ),
-                                    /*Container(
-                                      width: 24,
-                                      height: 24,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x00FFFFFF),
-                                      ),
-                                    ),*/
                                   ],
                                 ),
                               ),
@@ -260,21 +238,13 @@ class _HomeState extends State<Home> {
                                     Padding(
                                       padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
                                       child: Text(
-                                        'Hum',
+                                        'Feut',
                                         style: TextStyle(
                                           fontFamily: 'Overpass',
                                           color: data["dynamicColor"],
                                         ),
                                       ),
                                     ),
-                                    /*Text(
-                                      '|',
-                                      style: TextStyle(
-                                        fontFamily: 'Overpass',
-                                        color: data["dynamicColor"],
-                                        fontSize: 16,
-                                      ),
-                                    ),*/
                                     Text(
                                       data["hum"],
                                       style: TextStyle(
@@ -283,13 +253,6 @@ class _HomeState extends State<Home> {
                                         fontSize: 16,
                                       ),
                                     ),
-                                    /*Container(
-                                      width: 24,
-                                      height: 24,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x00FFFFFF),
-                                      ),
-                                    ),*/
                                   ],
                                 ),
                               ),
@@ -306,7 +269,7 @@ class _HomeState extends State<Home> {
                         primary: Colors.white,
                       ),
                       label: Text(
-                        'See ${data["location"]} on Google Maps',
+                        'Sehe ${data["location"]} auf Google Maps',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Overpass',

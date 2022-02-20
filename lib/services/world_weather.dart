@@ -23,20 +23,16 @@ class WorldWeather {
   WorldWeather({required this.location, required this.lan});
 
   Future<void> getWeather() async {
-    //Response response = await get(Uri.http("api.openweathermap.org","/data/2.5/weather?q=vienna&appid=5ac9176f0dcbe4dcdfeaf0aaf68a9d8b"));
     final response = await http.get(Uri.parse(
         "https://api.openweathermap.org/data/2.5/weather?q=$location&lang=$lan&appid=5ac9176f0dcbe4dcdfeaf0aaf68a9d8b&units=metric"));
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,
       // then parse the JSON.
       Map data = jsonDecode(response.body);
-      //print(data);
-      //get the weather from the data
+
       double ftemp = data["main"]["temp"];
+
       temp = ftemp.toString().split(".")[0][0] == "-"?ftemp.toString().split(".")[0].split("-")[1]:ftemp.toString().split(".")[0];
-      //print(data["weather"]);
-
-
       locationName = data["name"];
       main = data["weather"][0]["main"];
       description = data["weather"][0]["description"];
@@ -51,7 +47,7 @@ class WorldWeather {
     } else {
       // If the server did not return a 200 OK response,
       // then throw an exception.
-      throw Exception('Failed to load album');
+      throw Exception('Failed to load weather data');
     }
   }
 
