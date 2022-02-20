@@ -81,9 +81,8 @@ class _ChooseLocationState extends State<ChooseLocation> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF3469B3),
-        title: Text("Choose your location"),
+        title: Text("Wähle deinen Standort"),
         elevation: 0,
-
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -117,12 +116,10 @@ class _ChooseLocationState extends State<ChooseLocation> {
                       ),
                       child: ListTile(
                         tileColor: Color(0x00C11D1D),
-
                         onTap: () {
                           updateTime(index);
                         },
                         title: Text(locations[index].name,
-
                           style: TextStyle(
                             fontFamily: 'Overpass',
                             color: Color(0xFFFFFFFF),

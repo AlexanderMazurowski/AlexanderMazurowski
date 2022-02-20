@@ -238,7 +238,7 @@ class _HomeState extends State<Home> {
                                     Padding(
                                       padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
                                       child: Text(
-                                        'Feut',
+                                        'Feuchtigkeit',
                                         style: TextStyle(
                                           fontFamily: 'Overpass',
                                           color: data["dynamicColor"],
